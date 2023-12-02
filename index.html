@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+</head>
+
+<body>
+    <input id="listing_id" type="hidden" value="196882">
+    <div class="container my-5">
+        <div id="table-container">
+            
+        </div>
+    </div>
+</body>
+
+<!-- Include jQuery from a CDN -->
+<script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+    integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+            handleAnalyticsPost();
+    initializeDateRangePicker();
+        });
+    window.addEventListener("load", () => {
+        generateTableHTML();
+    });
+    const listingId = $("#listing_id").val();
+    const tableConfig = {
+        id: "#table-container",
+        tableId: "tbPosts",
+        itemsPerPage: 5,
+        defaultSortBy: "entered",
+        defaultSortOrder: "desc",
+        showSearch: true,
+        defaultDataInfo: "Current data reflects insights from post creation to present.",
+        filterLength: [5, 10, 20],
+        columns: [
+            { label: "Title", width: "65%", data: "title", align: "text-left" },
+            { label: "Published", width: "17%", data: "entered", sort: true, align: "text-left", formatDate: "DD MMMM YYYY" },
+            { label: "Views", width: "9%", data: "screenPageViews", align: "text-center" },
+            { label: "Shares", width: "9%", data: "share", align: "text-center" }
+        ]
+    };
+    const apiConfig = {
+        baseUrl: "https://tracking.top4.com.au/api",
+        endpoint: "/pressrelease",
+    };
+</script>
+<script src="custom-datatable.js"></script>
+
+</html>

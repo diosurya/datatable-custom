@@ -1,0 +1,259 @@
+thead {
+    text-align: left;
+  }
+  .table th{
+    font-weight: 700;
+    background: #f3f5f7 !important;
+    
+  }
+  .bg-white{
+    background-color: #fff !important;
+  }
+  .img-list{
+    max-width: 50px;
+    margin-right: 5px;
+  }
+
+  /* Skeleton */
+    .skeleton {
+        position: relative;
+    }  
+    .bar-skeleton {
+        height: 30px;
+    }
+    .bar-skeleton:after {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        left: 0;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 32px;
+        background-image: linear-gradient( rgba(235, 235, 235, 1) 1px, transparent 0 ),
+            linear-gradient(90deg, rgba(235, 235, 235, 1) 1px, transparent 0 ),
+            linear-gradient( 90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 15%, rgba(255, 255, 255, 0) 30% ),
+            linear-gradient( rgba(240, 240, 242, 1) 35px, transparent 0 );
+            background-repeat: repeat;
+
+            background-size:
+            1px 35px,
+            calc(100% * 0.1666666666) 1px,
+            30% 100%,
+            2px 70px;
+
+            background-position:
+            0 0,
+            0 0,
+            0 0,
+            0 0;
+
+            animation: shine 0.5s infinite;
+    }
+    @keyframes shine {
+        to {
+            background-position:
+                0 0,
+        0 0,
+        40% 0,
+                0 0;
+        }
+    }
+  /* End Skeleton */
+
+    .data-info {
+        float: left;
+        padding-top: 6px;
+        margin-left: 8px;
+    }
+    /* Pagination */
+    #pagination {
+        text-align: center;
+        display: flex;
+        font-size: 11px;
+        justify-content: end;
+    }
+
+    #prevPage, #nextPage {
+        background-color: #fff;
+        color: #828282;
+        padding: 6px 12px;
+        border: 1px solid #cccccc;
+        border-radius: 2px;
+        margin: 0 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 11px;
+    }
+
+    #prevPage:hover, #nextPage:hover {
+        background-color: rgb(107 114 128/12%);
+        color: #828282;
+    }
+
+    #currentPage {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 12px;
+    }
+
+    .page-number {
+        display: inline-block;
+        padding: 6px 12px;
+        border: 1px solid  #cccccc;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-right: 2px;
+    }
+
+    .page-number:hover {
+        background-color: rgb(107 114 128/12%);
+        color: #828282;
+    }
+
+    .page-number.active {
+        background-color: #459de336;
+        color: #828282;
+        border: 1px solid #459DE3;
+    }
+    #nextPage:disabled {
+        background-color: #fff;
+        color: #cbcbcb;
+        cursor: not-allowed;
+    }
+    #prevPage:disabled {
+        background-color: #fff;
+        color: #cbcbcb;
+        cursor: not-allowed;
+    }
+  /* End Pagination */
+    .ga_name {
+        display: flex;
+        padding: 0.5em 0;
+        align-items: center;
+        align-self: center;
+    }
+    .ga_name img {
+        margin-right: 5px;
+        height: 17px;
+    }
+
+    .text-center{
+        text-align: center;
+    }
+
+
+    tr.hover:hover {
+        background-color: #d8eaf9a8;
+        cursor: pointer;
+    }
+
+    #detailPressReleaseAnalytics {
+        display: none;
+    }
+
+    .topSec{
+        display: flex;
+        align-items: center;
+    }
+    #backtoLists{
+        margin-right: 15px;
+    }
+    #backtoLists:hover{
+        cursor: pointer;
+    }
+    .sort-column > .fa {
+        margin-left: 8px;
+        font-size: 13px;
+        color: #cbcbce;
+    }
+
+    .soft-blue{
+        color: #459de3 !important;
+    }
+    .sort-active{
+        color: #459de3 !important;
+        font-size: 16px !important;
+    }
+    .sort-column > .fa:hover{
+        cursor: pointer;
+    }
+
+    /* Searhing */
+    .search-container {
+        position: relative;
+    }
+
+    #searchTitle {
+        /* width: 100%; */
+        padding: 6px 15px 6px 30px;
+        font-size: 12px;
+        line-height: 1.5;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+    }
+
+    .search-icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #828282;
+        font-size: 16px;
+    }
+
+    /* End Searhing */
+
+    .d-flex{
+        display: flex;
+    }
+    .align-items-center{
+        align-items: center;
+    }
+    .justify-content-end{
+        justify-content: end;
+    }
+
+    .justify-self-right{
+        justify-self: right;
+    }
+
+    .date-range{
+        border: 1px solid #ced4da;
+        max-width: 180px;
+        width: auto;
+        padding: 0 10px 0 10px;
+        color: #8282a2;
+        font-weight: 700;
+        border-radius: 0.25rem;
+        height: 100%;
+    }
+    .date-range:hover{
+        cursor: pointer;
+        color: #333;
+    }
+    .reset-filters{
+        border: 1px solid #ced4da;
+        max-width: 180px;
+        /* background: #d8eaf9; */
+        width: auto;
+        padding: 0 14px 0 14px;
+        color: #8282a2;
+        font-weight: 500;
+        border-radius: 0.25rem;
+        height: 100%;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+    }
+    .reset-filters:hover{
+        cursor: pointer;
+        color: #64a8df;
+    }
+    .sort-column > span:hover{
+        cursor: pointer;
+    }
+    .border-bottom {
+        border-bottom: 2px solid #cccccc !important;
+    }
